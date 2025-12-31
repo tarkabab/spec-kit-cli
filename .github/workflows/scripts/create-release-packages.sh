@@ -174,7 +174,7 @@ build_variant() {
       generate_commands roo md "\$ARGUMENTS" "$base_dir/.roo/commands" "$script" ;;
     cline)
       mkdir -p "$base_dir/.clinerules/workflows"
-      generate_commands cline md "\$ARGUMENTS" "$base_dir/.clinerules/commands" "$script" ;;
+      generate_commands cline md "\$ARGUMENTS" "$base_dir/.clinerules/workflows" "$script" ;;
   esac
   ( cd "$base_dir" && zip -r "../spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip" . )
   echo "Created $GENRELEASES_DIR/spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip"
