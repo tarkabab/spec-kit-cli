@@ -173,7 +173,7 @@ build_variant() {
       mkdir -p "$base_dir/.roo/commands"
       generate_commands roo md "\$ARGUMENTS" "$base_dir/.roo/commands" "$script" ;;
     cline)
-      mkdir -p "$base_dir/.clinerules/commands"
+      mkdir -p "$base_dir/.clinerules/workflows"
       generate_commands cline md "\$ARGUMENTS" "$base_dir/.clinerules/commands" "$script" ;;
   esac
   ( cd "$base_dir" && zip -r "../spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip" . )
